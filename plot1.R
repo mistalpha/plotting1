@@ -10,3 +10,4 @@ win.graph(200,200)
 hist(df$Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red", ylim = c(0, 1200))
 axis(1, at=c(min(d$DateTime), min(d$DateTime)+86400,  min(d$DateTime)+2*86400),
      labels=c("Thu", "Fri", "Sat"))   
+dev.off()
