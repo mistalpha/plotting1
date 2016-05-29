@@ -19,7 +19,7 @@ with(df, {plot(DateTime, Global_active_power, type = "n", xlab = "daytime", ylab
           with(df, points(DateTime, Sub_metering_1, type = "l"))
           with(df, points(DateTime, Sub_metering_2, type = "l", col = "red"))
           with(df, points(DateTime, Sub_metering_3, type = "l", col = "blue"))
-          legend("topright", pch = "¢w", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))          
+          legend("topright", pch = "Â¢w", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))          
           plot(DateTime, Voltage, type = "n", xlab = "daytime", ylab = "Voltage (volts)" , axes = F, frame.plot=TRUE)
           axis(1, at=c(as.numeric(min(df$DateTime)), as.numeric(min(df$DateTime))+86400
              , as.numeric(min(df$DateTime))+2*86400), labels=c("Thu", "Fri", "Sat"))
@@ -31,3 +31,4 @@ with(df, {plot(DateTime, Global_active_power, type = "n", xlab = "daytime", ylab
           axis(2, yaxs = "r")
           with(df, points(DateTime, Global_reactive_power, type = "l"))
           })
+dev.off()
