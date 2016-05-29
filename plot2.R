@@ -12,3 +12,4 @@ axis(1, at=c(as.numeric(min(df$DateTime)), as.numeric(min(df$DateTime))+86400
              , as.numeric(min(df$DateTime))+2*86400), labels=c("Thu", "Fri", "Sat"))
 axis(2, yaxs = "r")
 with(df, points(DateTime, Global_active_power, type = "l"))
+dev.off()
